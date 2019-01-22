@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    box-sizing: border-box;
+}
+
+* button {
+    display: block;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.task {
+    position: relative;
+}
+
+textarea {
+    display: block;
+    margin: 0 auto;
+    height: 20vh;
+    width: 40vw;
+}
+
+.addTask {
+    margin: 0 auto;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.addTask:hover {
+    background-color: black;
+    color: white;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    width: 40vw;
+    margin: 1% 1%;
+}
+
+li:nth-child(even) {
+    background-color: #eee;
+}
+
+li:nth-child(odd) {
+    background-color: #ccc;
+}
+
+.remove {
+    display: inline-block;
+}

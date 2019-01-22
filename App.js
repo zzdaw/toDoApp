@@ -20,13 +20,21 @@ class App extends React.Component {
             tasks
         })
     }
+    handleRemoveTask = (item) => {
+        const tasks = [...this.state.tasks].filter(task => task !== item)
+        this.setState({
+            tasks
+        })
+    }
     render() {
-        const item = this.state.tasks.map(item => <Item item={item} />)
+        const item = this.state.tasks.map(item => <Item item={item} key={item} remove={this.handleRemoveTask} />)
         return (
             <div className='task'>
-                <textarea value={this.state.value} onChange={this.handleAreaValue} cols="30" rows="5"></textarea><br />
+                <textarea placeholder='What task do you want to add?' value={this.state.value} onChange={this.handleAreaValue} cols="28" rows="5"></textarea><br />
                 <button className='addTask' onClick={this.handleAddTask}>Add task</button>
-                {item}
+                <ul>
+                    {item}
+                </ul>
             </div>
         );
     }

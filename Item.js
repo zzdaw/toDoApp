@@ -1,5 +1,7 @@
 const Item = (props) => {
     return (
-        <li className='li'>{props.item}</li>
+        <>
+            <li>{props.item} </li><button onClick={() => props.remove(props.item)} className='remove'>Remove</button>
+        </>
     )
 }
